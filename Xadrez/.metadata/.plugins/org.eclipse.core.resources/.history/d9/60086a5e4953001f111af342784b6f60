@@ -1,0 +1,45 @@
+package xadrez.jogador;
+
+import xadrez.peca.*;
+import xadrez.tabuleiro.*;
+
+public class Jogador {
+
+	public Tabuleiro t = new Tabuleiro();
+
+	Peca torre = new Torre(0, 0);
+	Peca cavalo = new Cavalo(1, 0);
+	Peca bispo = new Bispo(2, 0);
+	Peca rei = new Rei(3, 0);
+	Peca dama = new Rainha(4, 0);
+	Peca bispo2 = new Bispo(5, 0);
+	Peca cavalo2 = new Cavalo(6, 0);
+	Peca torre2 = new Torre(7, 0);
+	Peca p = new Torre(0, 1);
+	Peca p2 = new Torre(1, 1);
+	Peca p3 = new Torre(2, 1);
+	Peca p4 = new Torre(3, 1);
+	Peca p5 = new Torre(4, 1);
+	Peca p6 = new Torre(5, 1);
+	Peca p7 = new Torre(6, 1);
+	Peca p8 = new Torre(7, 1);
+
+	public Jogador() {
+		t.iniciar(torre, 0, 0);
+		t.iniciar(cavalo, 1, 0);
+		t.iniciar(bispo, 2, 0);
+		t.iniciar(rei, 3, 0);
+		t.iniciar(dama, 4, 0);
+		t.iniciar(bispo2, 5, 0);
+		t.iniciar(cavalo2, 6, 0);
+		t.iniciar(torre2, 7, 0);
+		t.iniciar(p, 0, 1);
+		t.iniciar(p2, 1, 1);
+		t.iniciar(p3, 2, 1);
+		t.iniciar(p4, 3, 1);
+		t.iniciar(p5, 4, 1);
+		t.iniciar(p6, 5, 1);
+		t.iniciar(p7, 6, 1);
+		t.iniciar(p8, 7, 1);
+	}
+}

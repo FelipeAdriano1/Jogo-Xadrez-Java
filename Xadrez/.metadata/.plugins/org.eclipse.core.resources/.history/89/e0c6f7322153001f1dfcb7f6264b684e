@@ -1,0 +1,16 @@
+package jogoXadrez;
+
+public class Rei extends Peca {
+	
+	final int nMovimento = 1;
+	
+	public Rei(int x, int y) {
+		super(x, y);
+	}
+	
+	public void mover(int x, int y) {
+		if(x + 1 > getX() || y + 1 > getY()) {
+			
+		}
+	}
+}

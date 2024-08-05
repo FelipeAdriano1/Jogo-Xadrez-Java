@@ -1,0 +1,6 @@
+package xadrez.jogador;
+
+public class Jogador {
+
+	boolean vez = false;
+}

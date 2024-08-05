@@ -1,0 +1,51 @@
+package xadrez.jogador;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import xadrez.peca.*;
+import xadrez.tabuleiro.*;
+
+public class Main extends Jogador {
+
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int cordX = 0;
+		int cordY = 0;
+		int destX = 0;
+		int destY = 0;
+		
+		Jogador j1 = new Jogador();
+		Jogador2 j2 = new Jogador2();
+		Tabuleiro tab = new Tabuleiro(j1.retornarP(), j2.retornarP());
+		
+		Peca[][] t = tab.retornar();
+		
+		for(int i = 0; i < 8; i++) {
+			for(int j = 0; j < 8; j++) {
+				System.out.print(t[i][j].getNome() + "   ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("Digite as coordenadas X da peça que quer movimentar: ");
+		cordX = Integer.parseInt(br.readLine());
+		System.out.println("Digite as coordenadas Y da peça que quer movimentar: ");
+		cordY = (int) br.read();
+		
+		System.out.println("Digite as coordenadas X de destino: ");
+		destX = (int) br.read();
+		System.out.println("Digite as coordenadas Y de destino: ");
+		destY = (int) br.read();
+		
+		tab.movimentar(cordX, cordY, destX, destY);
+		
+		for(int i = 0; i < 8; i++) {
+			for(int j = 0; j < 8; j++) {
+				System.out.print(t[i][j].getNome() + "   ");
+			}
+			System.out.println();
+		}
+	}
+}

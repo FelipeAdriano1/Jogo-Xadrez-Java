@@ -1,0 +1,7 @@
+package xadrez.jogador;
+
+import xadrez.peca.*;
+import xadrez.tabuleiro.*;
+
+public class Jogador {
+}

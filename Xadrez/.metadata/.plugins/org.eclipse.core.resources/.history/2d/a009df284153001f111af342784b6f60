@@ -1,0 +1,4 @@
+package xadrez.peca;
+
+public class Rainha{
+}

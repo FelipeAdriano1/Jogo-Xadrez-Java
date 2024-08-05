@@ -1,0 +1,6 @@
+package Peca;
+
+public class Jogador {
+
+	boolean vez = false;
+}

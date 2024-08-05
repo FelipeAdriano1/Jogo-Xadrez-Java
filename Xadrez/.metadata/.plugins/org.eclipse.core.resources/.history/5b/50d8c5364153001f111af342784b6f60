@@ -1,0 +1,5 @@
+package xadrez.peca;
+
+public class Bispo {
+
+}

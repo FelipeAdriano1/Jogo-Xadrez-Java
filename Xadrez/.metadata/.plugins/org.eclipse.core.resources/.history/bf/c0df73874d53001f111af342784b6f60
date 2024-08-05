@@ -1,0 +1,44 @@
+package xadrez.jogador;
+
+import xadrez.peca.*;
+import xadrez.tabuleiro.*;
+
+public class Jogador2 extends Tabuleiro{
+	
+	public Jogador2() {
+		Peca r = new Torre(8, 8);
+		Peca h = new Cavalo(8, 1);
+		Peca b = new Bispo(8, 2);
+		Peca k = new Rei(8, 3);
+		Peca q = new Rainha(8, 4);
+		Peca b2 = new Bispo(8, 5);
+		Peca h2 = new Cavalo(8, 6);
+		Peca r2 = new Torre(8, 7);
+		
+		Peca p = new Peao(7, 0);
+		Peca p2 = new Peao(7, 1);
+		Peca p3 = new Peao(7, 2);
+		Peca p4 = new Peao(7, 3);
+		Peca p5 = new Peao(7, 4);
+		Peca p6 = new Peao(7, 5);
+		Peca p7 = new Peao(7, 6);
+		Peca p8 = new Peao(7, 7);
+		
+		tabuleiro[8][0] = r;
+		tabuleiro[8][1] = h;
+		tabuleiro[8][2] = b;
+		tabuleiro[8][3] = k;
+		tabuleiro[8][4] = q;
+		tabuleiro[8][5] = b2;
+		tabuleiro[8][6] = h2;
+		tabuleiro[8][7] = r2;
+		
+		tabuleiro[7][0] = p;
+		tabuleiro[7][1] = p2;
+		tabuleiro[7][2] = p3;
+		tabuleiro[7][3] = p4;
+		tabuleiro[7][4] = p5;
+		tabuleiro[7][5] = p6;
+		tabuleiro[7][6] = p7;
+	}
+}

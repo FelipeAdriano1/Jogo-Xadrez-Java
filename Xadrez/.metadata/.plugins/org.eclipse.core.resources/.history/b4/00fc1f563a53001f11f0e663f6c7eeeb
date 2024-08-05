@@ -1,0 +1,6 @@
+package jogoXadrez;
+
+public class Jogador {
+
+	boolean vez = false;
+}

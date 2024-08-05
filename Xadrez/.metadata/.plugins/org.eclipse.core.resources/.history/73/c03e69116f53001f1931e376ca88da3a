@@ -1,0 +1,25 @@
+package xadrez.peca;
+
+public class Bispo extends Peca{
+
+	final String nome = "B";
+
+	public Bispo(int x, int y) {
+		super(x, y);
+	}
+
+	public boolean mover(int nX, int nY) {
+		if (Math.abs(nX - x) == Math.abs(nY - y)) {
+			setX(x);
+			setY(y);
+			return true;
+		} 
+		else {
+			return false;
+		}
+	}
+
+	public String getNome() {
+		return nome;
+	}
+}

@@ -1,0 +1,10 @@
+package jogoXadrez;
+
+public class Rei extends Peca {
+	
+	final int nMovimento = 1;
+	
+	public void mover() {
+		
+	}
+}

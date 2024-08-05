@@ -1,0 +1,14 @@
+package xadrez.peca;
+
+public class Empty extends Peca {
+	
+	final String nome = "-";
+
+	public Empty(int x, int y) {
+		super(x, y);
+	}
+
+	public String getNome() {
+		return nome;
+	}
+}

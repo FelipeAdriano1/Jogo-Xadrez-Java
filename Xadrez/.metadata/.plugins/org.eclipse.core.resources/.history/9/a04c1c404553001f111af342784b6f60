@@ -1,0 +1,6 @@
+package xadrez.peca;
+
+public class Empty extends Peca {
+
+	final String nome = "-  ";
+}

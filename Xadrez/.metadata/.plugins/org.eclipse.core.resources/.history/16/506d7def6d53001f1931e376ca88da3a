@@ -1,0 +1,28 @@
+package xadrez.peca;
+
+public class Rainha extends Peca {
+
+	final String nome = "Q";
+
+	public Rainha(int x, int y) {
+		super(x, y);
+	}
+
+	public boolean mover(int nX, int nY) {
+		if (Math.abs(nX - x) <= 0 || Math.abs(nY - y) <= 0) {
+			setX(x);
+			setY(y);
+			return true;
+		} 
+		if(Math.abs(nX - x) == Math.abs(nY - y)) {
+			
+		}
+		else {
+			return false;
+		}
+	}
+
+	public String getNome() {
+		return nome;
+	}
+}

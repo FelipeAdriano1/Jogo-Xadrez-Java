@@ -1,0 +1,12 @@
+package jogoXadrez;
+
+public class Rainha extends Peca{
+
+	public Rainha(int x, int y) {
+		super(x, y);
+	}
+	
+	public boolean mover(int x, int y) {
+		
+	}
+}
