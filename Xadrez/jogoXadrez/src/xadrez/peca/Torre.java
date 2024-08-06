@@ -4,24 +4,28 @@ public class Torre extends Peca {
 
 	final String nome = "R";
 
-	public Torre(int x, int y) {
-		super(x, y);
+	public Torre(int x, int y, int jogador) {
+		super(x, y, jogador);
 	}
 
 	public boolean mover(int nX, int nY) {
 		if (Math.abs(nX - x) <= 0 || Math.abs(nY - y) <= 0) {
-			setX(x);
-			setY(y);
-			System.out.println("\nMovimento válido !\n");
+			setX(nX);
+			setY(nY);
+			System.out.println("\nMovimento válido !");
 			return true;
 		} 
 		else {
-			System.out.println("\nMovimento Inválido.\n");
+			System.out.println("\nMovimento inválido da torre na posição X:" + getX() + " Y:" + getY() + "\n");
 			return false;
 		}
 	}
 
 	public String getNome() {
 		return nome;
+	}
+	
+	public int getJogador() {
+		return jogador;
 	}
 }

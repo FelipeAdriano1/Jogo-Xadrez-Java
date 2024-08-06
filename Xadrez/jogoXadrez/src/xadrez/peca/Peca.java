@@ -4,10 +4,12 @@ public abstract class Peca {
 
 	protected int x = 0;
 	protected int y = 0;
+	protected int jogador = 0;
 	
-	public Peca(int x, int y) {
+	public Peca(int x, int y, int jogador) {
 		this.x = x;
 		this.y = y;
+		this.jogador = jogador;
 	}
 	
 	public int getX() {
@@ -29,6 +31,8 @@ public abstract class Peca {
 	public boolean realizarMovimento(int x, int y) {
 		return mover(x, y);
 	}
+	
+	public abstract int getJogador();
 	
 	public abstract String getNome();
 	

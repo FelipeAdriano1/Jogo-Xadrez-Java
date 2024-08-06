@@ -10,23 +10,23 @@ public class Jogador{
 	
 	public Jogador() {
 		
-		Peca r = new Torre(0, 0);
-		Peca h = new Cavalo(0, 1);
-		Peca b = new Bispo(0, 2);
-		Peca k = new Rei(0, 3);
-		Peca q = new Rainha(0, 4);
-		Peca b2 = new Bispo(0, 5);
-		Peca h2 = new Cavalo(0, 6);
-		Peca r2 = new Torre(0, 7);
+		Peca r = new Torre(0, 0, 2);
+		Peca h = new Cavalo(0, 1, 2);
+		Peca b = new Bispo(0, 2, 2);
+		Peca k = new Rei(0, 3, 2);
+		Peca q = new Rainha(0, 4, 2);
+		Peca b2 = new Bispo(0, 5, 2);
+		Peca h2 = new Cavalo(0, 6, 2);
+		Peca r2 = new Torre(0, 7, 2);
 		
-		Peca p = new Peao(1, 0);
-		Peca p2 = new Peao(1, 1);
-		Peca p3 = new Peao(1, 2);
-		Peca p4 = new Peao(1, 3);
-		Peca p5 = new Peao(1, 4);
-		Peca p6 = new Peao(1, 5);
-		Peca p7 = new Peao(1, 6);
-		Peca p8 = new Peao(1, 7);
+		Peca p = new Peao(1, 0, 2);
+		Peca p2 = new Peao(1, 1, 2);
+		Peca p3 = new Peao(1, 2, 2);
+		Peca p4 = new Peao(1, 3, 2);
+		Peca p5 = new Peao(1, 4, 2);
+		Peca p6 = new Peao(1, 5, 2);
+		Peca p7 = new Peao(1, 6, 2);
+		Peca p8 = new Peao(1, 7, 2);
 		
 		pecas[0][0] = r;
 		pecas[0][1] = h;

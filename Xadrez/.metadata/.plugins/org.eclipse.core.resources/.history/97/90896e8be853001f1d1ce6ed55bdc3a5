@@ -1,0 +1,47 @@
+package xadrez.tabuleiro;
+import xadrez.peca.*;
+
+public class Tabuleiro{
+
+	private Peca tabuleiro[][] = new Peca[8][8]; 
+	
+	public Tabuleiro(Peca j1[][], Peca[][] j2) {
+		for(int i = 2; i < 6; i++) {
+			for(int j = 0; j < 8; j++) {
+				Peca empty = new Empty(i, j, 0);
+				tabuleiro[i][j] = empty;
+			}
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			for(int j = 0; j < 8; j++) {
+				tabuleiro[i][j] = j1[i][j];
+			}
+		}
+		int p = 0;
+		for(int i = 6; i < 8; i++) {
+			for(int j = 0; j < 8; j++) {
+				tabuleiro[i][j] = j2[p][j];
+			}
+			p++;
+		}
+	}
+	
+	public Peca[][] retornar(){
+		return tabuleiro;
+	}
+	
+	public void movimentar(int x, int y, int valX, int valY, boolean jogador) {
+
+		Peca select = tabuleiro[x][y];
+		Peca empty = new Empty(x, y, 0);
+		int vez = 0;
+		
+		if(jogador == true) {vez = 1;} else {vez = 2}
+		if(select.getJogador() == vez && select.realizarMovimento(valY, valX)) {
+			System.out.println("\nVez do jogador: " + vez + ".\n");
+			tabuleiro[valX][valY] = select;
+			tabuleiro[x][y] = empty;
+		}
+	}
+}

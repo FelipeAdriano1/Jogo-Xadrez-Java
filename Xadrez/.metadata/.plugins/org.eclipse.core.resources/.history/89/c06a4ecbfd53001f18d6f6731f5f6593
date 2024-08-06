@@ -1,0 +1,38 @@
+package xadrez.peca;
+
+public class Peao extends Peca {
+
+	final String nome = "P";
+
+	public Peao(int x, int y, int jogador) {
+		super(x, y, jogador);
+	}
+
+	public boolean mover(int nX, int nY) {
+		if (nX - x == -1 && nY == y) {
+			setX(nX);
+			setY(nY);
+			System.out.println("\nMovimento do peão 1");
+			return true;
+		} 
+		if(x == getX() && nX - x == 2 && nY - y == 2) {
+			setX(nX);
+			setY(nY);
+			System.out.println("\nMovimento inicial do peão");
+			return true;
+		}
+		
+		else {
+			System.out.println("\nMovimento inválido do peão na posição X:" + getX() + " Y:" + getY() + "\n");
+			return false;
+		}
+	}
+
+	public String getNome() {
+		return nome;
+	}
+	
+	public int getJogador() {
+		return jogador;
+	}
+}

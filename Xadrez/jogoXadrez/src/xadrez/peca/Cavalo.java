@@ -4,25 +4,29 @@ public class Cavalo extends Peca {
 
 	final String nome = "H";
 
-	public Cavalo(int x, int y) {
-		super(x, y);
+	public Cavalo(int x, int y, int jogador) {
+		super(x, y, jogador);
 	}
 
 	public boolean mover(int nX, int nY) {
 		if ((Math.abs(nX - x) == 1 && Math.abs(nY - y) == 2) ||
 				(Math.abs(nX - x) == 2 && Math.abs(nY - y) == 1)) {
-			setX(x);
-			setY(y);
-			System.out.println("\nMovimento válido !\n");
+			setX(nX);
+			setY(nY);
+			System.out.println("\nMovimento válido !");
 			return true;
 		} 
 		else {
-			System.out.println("\nMovimento Inválido.\n");
+			System.out.println("\nMovimento inválido do cavalo na posição X:" + getX() + " Y:" + getY() + "\n");
 			return false;
 		}
 	}
 
 	public String getNome() {
 		return nome;
+	}
+	
+	public int getJogador() {
+		return jogador;
 	}
 }

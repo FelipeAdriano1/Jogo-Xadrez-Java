@@ -4,8 +4,8 @@ public class Empty extends Peca {
 	
 	final String nome = "-";
 
-	public Empty(int x, int y) {
-		super(x, y);
+	public Empty(int x, int y, int jogador) {
+		super(x, y, jogador);
 	}
 
 	public boolean mover(int nX, int nY) {
@@ -20,5 +20,9 @@ public class Empty extends Peca {
 
 	public String getNome() {
 		return nome;
+	}
+	
+	public int getJogador() {
+		return jogador;
 	}
 }
